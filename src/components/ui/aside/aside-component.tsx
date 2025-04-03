@@ -1,11 +1,11 @@
-import { SettingsLogo } from "@/components/ui/SettingsLogo";
-import { HomeLogo } from "@/components/ui/HomeLogo";
-import { UserLogo } from "@/components/ui/UserLogo";
+import { SettingsLogo } from "@/components/ui/logos/SettingsLogo";
+import { HomeLogo } from "@/components/ui/logos/HomeLogo";
+import { UserLogo } from "@/components/ui/logos/UserLogo";
 import Link from "next/link";
-import { CalendarLogo } from "@/components/ui/CalendarLogo";
-import { DogLogo } from "@/components/ui/DogLogo";
-import { Calendar2 } from "@/components/ui/Calendar2";
-import { AddPetLogo } from "@/components/ui/AddPetLogo";
+import { CalendarLogo } from "@/components/ui/logos/CalendarLogo";
+import { DogLogo } from "@/components/ui/logos/DogLogo";
+import { Calendar2 } from "@/components/ui/logos/Calendar2";
+import { AddPetLogo } from "@/components/ui/logos/AddPetLogo";
 
 export const AsideComponent = () => {
   return (

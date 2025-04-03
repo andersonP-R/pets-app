@@ -1,5 +1,5 @@
 import { AsideComponent } from "@/components/ui/aside/aside-component";
-import { HomeLogo } from "@/components/ui/HomeLogo";
+import { HomeLogo } from "@/components/ui/logos/HomeLogo";
 import type { Metadata } from "next";
 import Image from "next/image";
 
@@ -33,7 +33,7 @@ export default function DashboardLayout({
           </div>
 
           {/* Main Content */}
-          <div className="bg-[#9fc5f8] overflow-y-scroll p-2 h-[100%] [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar]:bg-[#9fc5f8] [&::-webkit-scrollbar-thumb]:bg-[#6fa8dc]">
+          <div className="flex flex-col items-center bg-[#9fc5f8] overflow-y-scroll p-2 h-[100%] [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar]:bg-[#9fc5f8] [&::-webkit-scrollbar-thumb]:bg-[#6fa8dc]">
             {children}
           </div>
         </div>
