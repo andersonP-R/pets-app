@@ -10,7 +10,7 @@
 
 ### 1. Clonar el Repositorio
 
-```bash (cmd/linea de comandos)
+```bash
 git clone https://github.com/andersonP-R/pets-app.git
 cd pets-app
 ```
@@ -21,7 +21,13 @@ cd pets-app
 npm install
 ```
 
-### 3. Iniciar la Aplicación
+### 3. Correr el proyecto en desarrollo
+
+```bash
+npm run dev
+```
+
+### 4. Iniciar la Aplicación
 
 ```bash
 npm start
