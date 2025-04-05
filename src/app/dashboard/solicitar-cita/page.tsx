@@ -29,7 +29,7 @@ export default function SolicitarCitaPage() {
           <span className="pt-[2px]">ESPECIE</span>
         </div>
 
-        <select className="bg-amber-50 border-2 border-black py-2 rounded-md">
+        <select className="bg-amber-50 border-2 border-black py-2 pl-1 rounded-md">
           <option value="">Seleccione el tipo de mascota</option>
           <option value="">Perro</option>
           <option value="">Gato</option>
@@ -70,7 +70,7 @@ export default function SolicitarCitaPage() {
           <span className="pt-[2px]">SEDE</span>
         </div>
 
-        <select className="bg-amber-50 border-2 border-black py-2 rounded-md">
+        <select className="bg-amber-50 border-2 border-black py-2 pl-2 rounded-md">
           <option value="">Seleccione la sede</option>
           <option value="">Cl. 71d Sur #6-94, Bogotá</option>
           <option value="">Cra. 68a #24b-10 torre 2 piso 4, Bogotá</option>
