@@ -7,7 +7,7 @@ export default function MisMascotasPage() {
   return (
     <>
       <div className="flex justify-center items-center p-4 gap-2 mb-5">
-        <h1 className="font-bold text-xl">Consultar Citas</h1>
+        <h1 className="font-bold text-xl">Mis Peluditos</h1>
         <div className="relative">
           <input
             type="text"
