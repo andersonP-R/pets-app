@@ -33,7 +33,14 @@ export default function DashboardLayout({
           </div>
 
           {/* Main Content */}
-          <div className="flex flex-col items-center bg-[#9fc5f8] overflow-y-scroll p-2 h-[100%] [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar]:bg-[#9fc5f8] [&::-webkit-scrollbar-thumb]:bg-[#6fa8dc]">
+          <div
+            className="flex flex-col items-center overflow-y-scroll p-2 h-[100%] [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar]:bg-[#9fc5f8] [&::-webkit-scrollbar-thumb]:bg-[#6fa8dc]"
+            style={{
+              backgroundImage: "url('/images/background.jpg')",
+              backgroundSize: "cover",
+              opacity: 0.9,
+            }}
+          >
             {children}
           </div>
         </div>
