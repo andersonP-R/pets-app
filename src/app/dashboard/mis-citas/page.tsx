@@ -1,4 +1,6 @@
 import { SearchLogo } from "@/components/ui/logos/SearchLogo";
+import Link from "next/link";
+import { IoTrashSharp } from "react-icons/io5";
 
 export default function MisCitasPage() {
   return (
@@ -18,10 +20,11 @@ export default function MisCitasPage() {
       </div>
 
       {/* ------------------- TABLA --------------------------- */}
-      <div className="relative overflow-x-auto rounded-2xl w-[90%]">
+      <div className="relative overflow-x-auto rounded-2xl">
         <table className="w-full text-left rtl:text-right text-black">
           <thead className="text-[16px] border-b-2 border-black text-black bg-[#ffffff8a] ">
             <tr>
+              <th scope="col" className=""></th>
               <th scope="col" className="px-6 py-3">
                 Nombre de la mascota
               </th>
@@ -37,10 +40,16 @@ export default function MisCitasPage() {
               <th scope="col" className="px-6 py-3">
                 Hora
               </th>
+              <th scope="col" className="px-6 py-3">
+                Borrar
+              </th>
             </tr>
           </thead>
           <tbody>
             <tr className="bg-[#ffffff8a] border-b-2 border-gray-500">
+              <th scope="row" className="px-2">
+                <input type="checkbox" />
+              </th>
               <th
                 scope="row"
                 className="px-6 py-4 font-medium text-black whitespace-nowrap"
@@ -51,8 +60,16 @@ export default function MisCitasPage() {
               <td className="px-6 py-4">Perro</td>
               <td className="px-6 py-4">02/04/2025</td>
               <td className="px-6 py-4">2:30 pm</td>
+              <td className="flex items-center justify-center h-[80px]">
+                <Link href={"#"}>
+                  <IoTrashSharp size={25} />
+                </Link>
+              </td>
             </tr>
             <tr className="bg-[#ffffff8a] border-b-2 border-gray-500">
+              <th scope="row" className="px-2">
+                <input type="checkbox" />
+              </th>
               <th
                 scope="row"
                 className="px-6 py-4 font-medium text-black whitespace-nowrap"
@@ -63,6 +80,11 @@ export default function MisCitasPage() {
               <td className="px-6 py-4">Gato</td>
               <td className="px-6 py-4">31/03/2025</td>
               <td className="px-6 py-4">10:00 am</td>
+              <td className="flex items-center justify-center h-[80px]">
+                <Link href={"#"}>
+                  <IoTrashSharp size={25} />
+                </Link>
+              </td>
             </tr>
           </tbody>
         </table>
