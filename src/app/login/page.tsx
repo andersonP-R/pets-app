@@ -1,17 +1,19 @@
-import { IoLockClosed, IoPerson } from "react-icons/io5";
+import { IoLockClosed, IoPerson, IoReturnDownBackSharp } from "react-icons/io5";
 export default function LoginPage() {
   return (
+
     <div className="bg-[url(/images/background.jpg)] bg-cover bg-center">
       <div className="flex flex-col items-center justify-center p-8 gap-2">
-
-        <img
-          src={"/images/logo2.png"}
-          alt={"logo"}
-          width={500}
-          height={200}
-        />
-        <div className="border p-8 rounded shadow-lg bg-white">
-          <h1 className="text-3xl font-bold"> Inicio de Sesión </h1>
+        <div className="opacity-75 bg-white">
+          <img
+            src={"/images/logo-noBG.png"}
+            alt={"logo"}
+            width={500}
+            height={200}
+          />
+        </div>
+        <div className="border p-8 rounded shadow-lg bg-white opacity-85 w-100 mt-6">
+          <h1 className="text-3xl font-bold text-center p-3"> Inicio de Sesión </h1>
 
           <form className="flex flex-col gap-4">
 
@@ -29,7 +31,7 @@ export default function LoginPage() {
               <input type="password" id="" className="icon icon-tabler icons-tabler-outline icon-tabler-home rounded-none rounded-e-lg bg-gray-50 border text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-300 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Contraseña" />
             </div>
 
-            <div className="row flex justify-between">
+            <div className="row flex justify-between p-4">
               <button
                 type="submit"
                 className="bg-blue-500 text-white p-2 rounded hover:bg-blue-600 shadow-lg">
@@ -46,9 +48,15 @@ export default function LoginPage() {
             </p>
           </form>
         </div>
+
+      </div>
+      <div className="flex flex-row px-10">
+        <button className="bg-white hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center rounded-full flex-left">
+          <IoReturnDownBackSharp />
+          <span> Volver </span>
+        </button>
       </div>
     </div>
-
   );
 }
 
