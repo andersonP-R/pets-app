@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { IoLockClosed, IoPerson, IoReturnDownBackSharp } from "react-icons/io5";
 export default function LoginPage() {
   return (
@@ -37,11 +38,14 @@ export default function LoginPage() {
                 className="bg-blue-500 text-white p-2 rounded hover:bg-blue-600 shadow-lg">
                 Iniciar Sesión
               </button>
-              <button
-                type="submit"
-                className="bg-blue-500 text-white p-2 rounded hover:bg-blue-600 shadow-lg">
-                Registrarse
-              </button>
+              <Link
+                href="/register">
+                <button
+                  type="submit"
+                  className="bg-blue-500 text-white p-2 rounded hover:bg-blue-600 shadow-lg">
+                  Registrarse
+                </button>
+              </Link>
             </div>
             <p className="text-blue-600 underline text-center">
               ¿Olvidaste tu contraseña?
