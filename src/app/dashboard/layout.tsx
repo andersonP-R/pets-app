@@ -1,7 +1,6 @@
 import { AsideComponent } from "@/components/ui/aside/aside-component";
-import { HomeLogo } from "@/components/ui/logos/HomeLogo";
+import { NavComponent } from "@/components/ui/nav/nav-component";
 import type { Metadata } from "next";
-import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "App pets - Dashboard",
@@ -22,15 +21,7 @@ export default function DashboardLayout({
         {/* Main Content */}
         <div className="flex flex-col w-[75%] h-[100%]">
           {/* Header */}
-          <div className="flex items-center justify-between p-4 bg-[#cfe2fc]">
-            <Image
-              src={"/images/logo.png"}
-              alt={"logo"}
-              width={200}
-              height={160}
-            />
-            <HomeLogo />
-          </div>
+          <NavComponent />
 
           {/* Main Content */}
           <div
