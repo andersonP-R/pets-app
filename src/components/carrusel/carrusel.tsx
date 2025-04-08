@@ -36,8 +36,19 @@ export default function Carousel() {
           </div>
         </div>
       </SwiperSlide>
-
-      {/* Agrega más slides si quieres */}
-    </Swiper>
+      <SwiperSlide>
+        {/*slide 2*/}
+          <div className="bg-gradient-to-r from-yellow-100 to-yellow-400 p-6 text-center">
+            <h2 className="text-3xl font-bold text-yellow-800">¡Oferta especial Hill's!</h2>
+            <p className="text-5xl font-extrabold text-red-600 my-2">30% OFF</p>
+            <p className="text-lg text-yellow-900 mb-4">Nutrición premium para tu mascota con descuento</p>
+            <div className="flex justify-center gap-4">
+              <img src="/images/tienda/Productos/Alimento/Alimento2.png" alt="Hills comida" className="h-32 rounded-lg shadow-md" />
+              <img src="/images/tienda/Productos/Alimento/AlimentoCat5.png" alt="Hills comida" className="h-32 rounded-lg shadow-md" />
+            </div>
+          </div>
+        </SwiperSlide>
+      </Swiper>
+      
   );
 }

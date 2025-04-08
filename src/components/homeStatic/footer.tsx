@@ -6,7 +6,7 @@ import { BsWhatsapp } from "react-icons/bs";
 export default function Footer(){
 return(
   
-<footer className="bg-white mt-8 p-6 text-center border-t text-blue-600">
+<footer className="bg-white mt-8 p-6 text-center border-t text-blue-600"  style={{ backgroundColor: "#F8F9F9" }}>
   
   {/*datos de las sedes pirncipalesm implemetacion de icones y ajuste del texto y colores*/}
    

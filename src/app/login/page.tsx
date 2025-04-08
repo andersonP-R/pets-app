@@ -67,7 +67,7 @@ export default function LoginPage() {
       </div>
       <div className="flex flex-row px-10">
         <Link
-          href={"/"}
+          href={"/home/inicio"}
           className="bg-white hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 inline-flex items-center rounded-full flex-left"
         >
           <IoReturnDownBackSharp />
