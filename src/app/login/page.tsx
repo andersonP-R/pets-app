@@ -44,12 +44,15 @@ export default function LoginPage() {
             </div>
 
             <div className="row flex justify-between p-4">
+              <Link href="/dashboard">
               <button
                 type="submit"
                 className="bg-blue-500 text-white p-2 rounded hover:bg-blue-600 shadow-lg"
               >
                 Iniciar Sesión
               </button>
+              </Link>
+
               <Link href="/register">
                 <button
                   type="submit"

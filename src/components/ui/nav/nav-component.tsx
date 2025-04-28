@@ -10,7 +10,9 @@ export const NavComponent = () => {
         width={200}
         height={160}
       />
+      <a href="home/inicio">
       <HomeLogo />
+      </a>
     </div>
   );
 };

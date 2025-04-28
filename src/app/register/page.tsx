@@ -70,21 +70,27 @@ export default function RegisterPage() {
             </select>
           </div>
 
-          <button className="bg-blue-500 text-white p-2 rounded hover:bg-blue-600">
-            Confirmar
-          </button>
-        </form>
+          <a
+          href="login"
+          className="bg-blue-500 text-white p-2 rounded hover:bg-blue-600 inline-block text-center"
+          >
+           Confirmar
+          </a>
+          </form>
 
         <p className="text-center mt-3 text-sm">
-          <a href="#" className="text-blue-600">
+          <a href="login" className="text-blue-600">
             ¿Ya tienes cuenta?
           </a>
         </p>
       </div>
-
-      <button className="absolute bottom-5 left-5 bg-[#DDDDDD] px-4 py-2 rounded hover:bg-gray-400">
-        {"<"} Volver
-      </button>
+  
+    <a
+    href="home/inicio"
+   className="absolute bottom-5 left-5 bg-[#DDDDDD] px-4 py-2 rounded hover:bg-gray-400 inline-block"
+   >
+  {"<"} Volver
+   </a>
     </div>
   );
 }
