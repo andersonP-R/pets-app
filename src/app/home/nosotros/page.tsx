@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { useState } from "react";
 
 const slides = [
@@ -28,7 +29,9 @@ export default function NosotrosPage() {
     <div className="p-6 text-center" style={{ backgroundColor: "#9fc5f8" }}>
       <h1 className="text-2xl font-bold mb-4 text-blue-800">Nosotros</h1>
       <div className="relative max-w-2xl mx-auto">
-        <img
+        <Image
+          width={500}
+          height={500}
           src={slides[current].img}
           alt={slides[current].titulo}
           className="w-full h-96 object-cover rounded-xl shadow-lg"

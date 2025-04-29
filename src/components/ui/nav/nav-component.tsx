@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { HomeLogo } from "../logos/HomeLogo";
+import Link from "next/link";
 
 export const NavComponent = () => {
   return (
@@ -10,9 +11,9 @@ export const NavComponent = () => {
         width={200}
         height={160}
       />
-      <a href="home/inicio">
-      <HomeLogo />
-      </a>
+      <Link href="/">
+        <HomeLogo />
+      </Link>
     </div>
   );
 };

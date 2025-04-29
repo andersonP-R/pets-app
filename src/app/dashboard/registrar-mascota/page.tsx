@@ -57,12 +57,6 @@ export default function RegistraMascotaPage() {
                 <option value="boxer">Boxer</option>
               </select>
             </div>
-
-            <div className="flex flex-col w-full gap-1">
-              <span className="pt-[2px]">Tamaño</span>
-
-              <span>*pictures*</span>
-            </div>
           </div>
 
           {/* COL 2 */}

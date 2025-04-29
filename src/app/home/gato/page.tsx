@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { useState } from "react";
 import { RiDeleteBin6Line } from "react-icons/ri";
 
@@ -9,9 +10,9 @@ const productos = [
   { id: 3, nombre: "Aseo", categoria: "Cuidado e Higiene" },
   { id: 4, nombre: "Snacks Favoritos", categoria: "Snacks" },
   { id: 5, nombre: "Comida húmeda", categoria: "Alimento" },
-  { id: 6, nombre:"Medicamentos Destacados", categoria:"Farmapet"},
-  { id: 7, nombre: "Accesorios para gatos", categoria:"Accesorios"},
-  {id: 8,nombre: "Marcas de arenas mas llevadas ",categoria:"Arenas"}
+  { id: 6, nombre: "Medicamentos Destacados", categoria: "Farmapet" },
+  { id: 7, nombre: "Accesorios para gatos", categoria: "Accesorios" },
+  { id: 8, nombre: "Marcas de arenas mas llevadas ", categoria: "Arenas" },
 ];
 
 // Filtros disponibles
@@ -23,7 +24,7 @@ const filtrosDisponibles = [
   "Accesorios",
   "Cuidado e Higiene",
   "Snacks",
-  "Arenas"
+  "Arenas",
 ];
 
 // Asociamos imágenes a las categorías
@@ -35,7 +36,7 @@ const categoriaImagen: { [key: string]: string } = {
   Accesorios: "/images/AccesorioCat.jpg",
   "Cuidado e Higiene": "/images/AseoCat.jpg",
   Snacks: "/images/SnackCat.jpg",
-  Arenas: "/images/Arenas.jpg"
+  Arenas: "/images/Arenas.jpg",
 };
 
 export default function PaginaGatos() {
@@ -58,14 +59,15 @@ export default function PaginaGatos() {
   return (
     <div className="flex">
       {/* Filtros */}
-      <aside className="w-1/4 p-4" style={{backgroundColor: "#F5F5F5"}}>
+      <aside className="w-1/4 p-4" style={{ backgroundColor: "#F5F5F5" }}>
         <h2 className="font-semibold text-lg mb-4">Filtrar productos</h2>
 
         <button
           className="text-blue-600 text-sm mb-3 hover:underline"
           onClick={limpiarFiltros}
-        ><RiDeleteBin6Line />
-          Limpiar filtros 
+        >
+          <RiDeleteBin6Line />
+          Limpiar filtros
         </button>
 
         <ul>
@@ -85,8 +87,10 @@ export default function PaginaGatos() {
       </aside>
 
       {/* Productos */}
-      <section className="w-3/4 p-4" style={{backgroundColor: "#F5F5F5"}}>
-        <h2 className="text-xl font-bold mb-4 text-gray-500">Productos para gatos mas destacados</h2>
+      <section className="w-3/4 p-4" style={{ backgroundColor: "#F5F5F5" }}>
+        <h2 className="text-xl font-bold mb-4 text-gray-500">
+          Productos para gatos mas destacados
+        </h2>
         {productosFiltrados.length > 0 ? (
           <ul className="grid grid-cols-2 gap-6">
             {productosFiltrados.map((producto) => (
@@ -94,7 +98,9 @@ export default function PaginaGatos() {
                 key={producto.id}
                 className="border p-3 rounded bg-white shadow hover:shadow-md transition"
               >
-                <img
+                <Image
+                  width={300}
+                  height={300}
                   src={categoriaImagen[producto.categoria]}
                   alt={producto.nombre}
                   className="w-full h-9w-full h-120 md:h-140 object-cover rounded-lg mb-2 transform hover:scale-105 transition duration-300"
@@ -105,7 +111,9 @@ export default function PaginaGatos() {
             ))}
           </ul>
         ) : (
-          <p className="text-gray-600">No hay productos para los filtros seleccionados.</p>
+          <p className="text-gray-600">
+            No hay productos para los filtros seleccionados.
+          </p>
         )}
       </section>
     </div>

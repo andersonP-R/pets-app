@@ -1,5 +1,6 @@
 "use client";
 import { useCarrito } from "@/components/carrito/carritoContext";
+import Image from "next/image";
 
 export default function CarritoPage() {
   const { carrito } = useCarrito();
@@ -14,7 +15,13 @@ export default function CarritoPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {carrito.map((producto, index) => (
             <div key={index} className="border rounded shadow p-4 bg-white">
-              <img src={producto.img} alt={producto.nombre} className="w-full h-40 object-cover mb-2 rounded" />
+              <Image
+                width={300}
+                height={300}
+                src={producto.img}
+                alt={producto.nombre}
+                className="w-full h-40 object-cover mb-2 rounded"
+              />
               <h2 className="text-lg font-semibold">{producto.nombre}</h2>
             </div>
           ))}

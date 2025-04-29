@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { useState } from "react";
 import { RiDeleteBin6Line } from "react-icons/ri";
 
@@ -6,7 +7,8 @@ const servicios = [
   {
     nombre: "Clinica Veterina",
     imagen: "/images/ClinicaVeterinaria.jpg",
-    descripcion: "En nuestra clinica tenemos atencion médica general, urgencias, vacunación y desparasitación.",
+    descripcion:
+      "En nuestra clinica tenemos atencion médica general, urgencias, vacunación y desparasitación.",
   },
   {
     nombre: "Pet Shop",
@@ -16,17 +18,20 @@ const servicios = [
   {
     nombre: "Estetica canina y felina",
     imagen: "/images/Estetica.jpg",
-    descripcion: "Baño, corte de pelo y grooming especializado para perros y gatos.",
+    descripcion:
+      "Baño, corte de pelo y grooming especializado para perros y gatos.",
   },
   {
     nombre: "Farmapet",
     imagen: "/images/Medicamentos.jpg",
-    descripcion: "Medicamentos y suplementos especializados para el cuidado animal.",
+    descripcion:
+      "Medicamentos y suplementos especializados para el cuidado animal.",
   },
   {
     nombre: "Imagenes diagnosticas",
     imagen: "/images/Radiografia.jpg",
-    descripcion: "Ecografías, radiografías y otros exámenes para diagnóstico avanzado.",
+    descripcion:
+      "Ecografías, radiografías y otros exámenes para diagnóstico avanzado.",
   },
   {
     nombre: "Laboratorio",
@@ -69,30 +74,36 @@ export default function PaginaServicios() {
 
       {/* Detalle */}
       <section className="md:w-3/4 bg-white p-4 rounded shadow">
-  {servicioActivo ? (
-    <div>
-      <img
-        src={servicioActivo.imagen}
-        alt={servicioActivo.nombre}
-        className="w-full h-100 object-cover rounded-lg mb-4"
-      />
-      <h3 className="text-xl font-semibold text-gray-800 mb-2">
-        {servicioActivo.nombre}
-      </h3>
-      <p className="text-gray-600">{servicioActivo.descripcion}</p>
-    </div>
-  ) : (
-    <div className="text-center">
-        <img
-            src="/images/Servicios.jpg"
-            alt="Servicios"
-            className="w-full h-80 object-cover rounded-lg"
-        />
-  
-      <p className="text-gray-500">Selecciona un servicio de la lista para ver más detalles.</p>
-    </div>
-  )}
-</section>
+        {servicioActivo ? (
+          <div>
+            <Image
+              width={500}
+              height={300}
+              src={servicioActivo.imagen}
+              alt={servicioActivo.nombre}
+              className="w-full h-100 object-cover rounded-lg mb-4"
+            />
+            <h3 className="text-xl font-semibold text-gray-800 mb-2">
+              {servicioActivo.nombre}
+            </h3>
+            <p className="text-gray-600">{servicioActivo.descripcion}</p>
+          </div>
+        ) : (
+          <div className="text-center">
+            <Image
+              width={500}
+              height={300}
+              src="/images/Servicios.jpg"
+              alt="Servicios"
+              className="w-full h-80 object-cover rounded-lg"
+            />
+
+            <p className="text-gray-500">
+              Selecciona un servicio de la lista para ver más detalles.
+            </p>
+          </div>
+        )}
+      </section>
     </div>
   );
 }

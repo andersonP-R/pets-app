@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { IoLockClosed, IoPerson, IoReturnDownBackSharp } from "react-icons/io5";
 export default function LoginPage() {
@@ -5,7 +6,8 @@ export default function LoginPage() {
     <div className="bg-[url(/images/background.jpg)] bg-cover bg-center pb-6">
       <div className="flex flex-col items-center justify-center p-8 gap-2">
         <div className="opacity-75 bg-white">
-          <img
+          <Image
+            className="rounded-full"
             src={"/images/logo-noBG.png"}
             alt={"logo"}
             width={500}
@@ -45,12 +47,12 @@ export default function LoginPage() {
 
             <div className="row flex justify-between p-4">
               <Link href="/dashboard">
-              <button
-                type="submit"
-                className="bg-blue-500 text-white p-2 rounded hover:bg-blue-600 shadow-lg"
-              >
-                Iniciar Sesión
-              </button>
+                <button
+                  type="submit"
+                  className="bg-blue-500 text-white p-2 rounded hover:bg-blue-600 shadow-lg"
+                >
+                  Iniciar Sesión
+                </button>
               </Link>
 
               <Link href="/register">

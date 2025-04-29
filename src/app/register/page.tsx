@@ -1,5 +1,15 @@
 import { Balsamiq_Sans } from "next/font/google";
-import { FaUser, FaEnvelope, FaIdCard, FaKey, FaCity, FaMapMarkerAlt, FaHome, FaUsers } from "react-icons/fa";
+import Image from "next/image";
+import {
+  FaUser,
+  FaEnvelope,
+  FaIdCard,
+  FaKey,
+  FaCity,
+  FaMapMarkerAlt,
+  FaHome,
+  FaUsers,
+} from "react-icons/fa";
 
 const balsamiqSans = Balsamiq_Sans({ subsets: ["latin"], weight: "400" });
 
@@ -10,7 +20,13 @@ export default function RegisterPage() {
       style={{ backgroundImage: "url('/images/background.jpg')" }}
     >
       <div className="w-full bg-[#CFE2FC] flex justify-center items-center py-4">
-        <img src="/images/logo.jpg" alt="Mundo Bigotes" className="h-16" />
+        <Image
+          width={200}
+          height={800}
+          src="/images/logo.jpg"
+          alt="Mundo Bigotes"
+          className="h-16"
+        />
       </div>
 
       <h2 className="text-center text-lg font-bold mt-4 mb-1">Regístrate</h2>
@@ -19,12 +35,20 @@ export default function RegisterPage() {
         <form className="flex flex-col gap-3">
           <div className="flex items-center gap-3">
             <FaUser />
-            <input type="text" placeholder="Usuario" className="border p-2 rounded w-full bg-white" />
+            <input
+              type="text"
+              placeholder="Usuario"
+              className="border p-2 rounded w-full bg-white"
+            />
           </div>
 
           <div className="flex items-center gap-3">
             <FaEnvelope />
-            <input type="email" placeholder="Correo electrónico" className="border p-2 rounded w-full bg-white" />
+            <input
+              type="email"
+              placeholder="Correo electrónico"
+              className="border p-2 rounded w-full bg-white"
+            />
           </div>
 
           <div className="flex items-center gap-3">
@@ -36,12 +60,20 @@ export default function RegisterPage() {
 
           <div className="flex items-center gap-3">
             <FaIdCard />
-            <input type="text" placeholder="Número de documento" className="border p-2 rounded w-full bg-white" />
+            <input
+              type="text"
+              placeholder="Número de documento"
+              className="border p-2 rounded w-full bg-white"
+            />
           </div>
 
           <div className="flex items-center gap-3">
             <FaKey />
-            <input type="password" placeholder="Contraseña" className="border p-2 rounded w-full bg-white" />
+            <input
+              type="password"
+              placeholder="Contraseña"
+              className="border p-2 rounded w-full bg-white"
+            />
           </div>
 
           <div className="flex items-center gap-3">
@@ -60,7 +92,11 @@ export default function RegisterPage() {
 
           <div className="flex items-center gap-3">
             <FaHome />
-            <input type="text" placeholder="Dirección de domicilio" className="border p-2 rounded w-full bg-white" />
+            <input
+              type="text"
+              placeholder="Dirección de domicilio"
+              className="border p-2 rounded w-full bg-white"
+            />
           </div>
 
           <div className="flex items-center gap-3">
@@ -71,12 +107,12 @@ export default function RegisterPage() {
           </div>
 
           <a
-          href="login"
-          className="bg-blue-500 text-white p-2 rounded hover:bg-blue-600 inline-block text-center"
+            href="login"
+            className="bg-blue-500 text-white p-2 rounded hover:bg-blue-600 inline-block text-center"
           >
-           Confirmar
+            Confirmar
           </a>
-          </form>
+        </form>
 
         <p className="text-center mt-3 text-sm">
           <a href="login" className="text-blue-600">
@@ -84,13 +120,13 @@ export default function RegisterPage() {
           </a>
         </p>
       </div>
-  
-    <a
-    href="home/inicio"
-   className="absolute bottom-5 left-5 bg-[#DDDDDD] px-4 py-2 rounded hover:bg-gray-400 inline-block"
-   >
-  {"<"} Volver
-   </a>
+
+      <a
+        href="home/inicio"
+        className="absolute bottom-5 left-5 bg-[#DDDDDD] px-4 py-2 rounded hover:bg-gray-400 inline-block"
+      >
+        {"<"} Volver
+      </a>
     </div>
   );
 }
